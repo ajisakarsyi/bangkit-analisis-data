@@ -5,6 +5,7 @@ import streamlit as st
 from babel.numbers import format_currency
 sns.set(style='dark')
 
+# baca file
 day_df = pd.read_csv('https://raw.githubusercontent.com/ajisakarsyi/bangkit-analisis-data/refs/heads/main/data/day.csv')
 hour_df = pd.read_csv('https://raw.githubusercontent.com/ajisakarsyi/bangkit-analisis-data/refs/heads/main/data/hour.csv')
 
@@ -19,7 +20,8 @@ with tab1:
 
     total_sales_per_day = day_df.groupby('weekday')['cnt'].mean().reset_index()
     total_sales_per_day.rename(columns={'cnt': 'average_sales'}, inplace=True)
-    
+
+    # visualisasi
     fig, ax = plt.subplots()
     sns.barplot(x='weekday', y='average_sales', data=total_sales_per_day, ax=ax, color='#72BCD4')
     ax.set_title('Bar plot: Day vs Penjualan')
@@ -36,7 +38,8 @@ with tab2:
 
     total_sales_per_hour = hour_df.groupby('hr')['cnt'].mean().reset_index()
     total_sales_per_hour.rename(columns={'cnt': 'average_sales'}, inplace=True)
-    
+
+    # visualisasi
     fig, ax = plt.subplots()
     sns.barplot(x='hr', y='average_sales', data=total_sales_per_hour, ax=ax, color='#72BCD4')
     ax.set_title('Bar plot: Hour vs Penjualan')
@@ -47,7 +50,8 @@ with tab2:
 
 with tab3:
     st.header("Pengaruh Kecepatan Angin terhadap Penjualan")
-    
+
+    # visualisasi
     fig, ax = plt.subplots()
     sns.scatterplot(x='windspeed', y='cnt', data=hour_df, ax=ax, color='#FF6347')
     ax.set_title('Scatter Plot: Windspeed vs Penjualan')
