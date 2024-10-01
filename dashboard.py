@@ -30,7 +30,11 @@ with tab1:
     ax.set_ylim(4000,5000)
     
     st.pyplot(fig)
-    
+
+    st.header("Kesimpulan")
+    st.write('''
+    - Hasil penyewaan sepeda per hari bervariasi, namun semakin mendekat ke weekend semakin menunjukkan tren penyewaan yang naik.
+    ''')
 
 with tab2:
     st.header("Hourly Dataframe")
@@ -48,6 +52,11 @@ with tab2:
     
     st.pyplot(fig)
 
+    st.header("Kesimpulan")
+    st.write('''
+    - Hasil penyewaan sepeda per jam bervariasi, namun memperlihatkan pola jam sibuk pada umumnya.
+    ''')
+    
 with tab3:
     st.header("Pengaruh Kecepatan Angin terhadap Penjualan")
 
@@ -59,3 +68,8 @@ with tab3:
     ax.set_ylabel('Jumlah Penjualan')
     
     st.pyplot(fig)
+
+    st.header("Kesimpulan")
+    st.write('''
+    - Meskipun rendah, kecepatan angin dengan penjualan memiliki pengaruh negatif, dimana apabila kecepatan angin terjadi dengan kuat maka hasil penyewaan sepeda cenderung rendah.
+    ''')
