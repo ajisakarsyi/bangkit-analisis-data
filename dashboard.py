@@ -17,12 +17,12 @@ with tab1:
     st.header("Daily Dataframe")
     st.header("Distribusi Rata-rata Penjualan Harian Bike Sharing")
 
-    total_sales_per_day = day_df.groupby('weekday_obj')['cnt'].mean().reset_index()
+    total_sales_per_day = day_df.groupby('weekday')['cnt'].mean().reset_index()
     total_sales_per_day.rename(columns={'cnt': 'average_sales'}, inplace=True)
 
     # visualisasi
     fig, ax = plt.subplots()
-    sns.barplot(x='weekday_obj', y='average_sales', data=total_sales_per_day, ax=ax, color='#72BCD4')
+    sns.barplot(x='weekday', y='average_sales', data=total_sales_per_day, ax=ax, color='#72BCD4')
     ax.set_title('Bar plot: Day vs Penjualan')
     ax.set_xlabel('Hari dalam Seminggu (0 = Senin, 6 = Minggu)')
     ax.set_ylabel('Rata-rata Penjualan')
