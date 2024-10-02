@@ -30,7 +30,7 @@ with tab1:
     
     st.pyplot(fig)
 
-    st.header("Kesimpulan")
+    st.header("Apabila ingin mengekspansi kuantitas produk dalam waktu yang terbatas, hari apa yang menjadi hari yang ideal untuk mengimplementasikan ekspansi tersebut?")
     st.write('''
     - Dalam memilih hari yang ideal agar ekspansi kuantitas dapat menghasilkan hasil yang maksimal, kita perlu mencari tahu hari apa yang memiliki rata-rata hasil penjualan tertinggi. Kita dapati bahwa hari sabtu merupakan hari yang memiliki rata-rata hasil penjualan tertinggi, dan pada umumnya hari sabtu memang digunakan untuk orang-orang dalam meluangkan waktu mereka, sehingga ekpansi kuantitas cocok untuk dilakukan di hari sabtu.
     ''')
@@ -51,9 +51,9 @@ with tab2:
     
     st.pyplot(fig)
 
-    st.header("Kesimpulan")
+    st.header("Anggap sebuah toko rental sepeda harus tutup sekali dalam sehari untuk beristirahat dan kembali membuka tokonya di hari berikutnya, maka pada jam berapa toko tersebut sebaiknya tutup dan buka kembali?")
     st.write('''
-    - Hasil penyewaan sepeda per jam bervariasi, namun memperlihatkan pola jam sibuk pada umumnya.
+    - Serupa dengan pertanyaan pertama, kita bisa cari jam berapakah penyewaan sepeda mendapati angka tertingginya. Kita bisa simplifikasi atribut jam menjadi 3 cluster yang dilakukan di Analisis Lanjutan. Kita bisa lihat bahwa penyewaan sepeda tertinggi terjadi pada rush hour, yang mana sesuai dengan jadwal pekerja dan pelajar sehari-hari yang ingin pulang dari kantor/sekolahnya. Kita bisa menjawab pertanyaan kedua ini dengan melihat pada rentang jam berapakah penyewaan sepeda mencapai titik yang cenderung rendah, dan kita bisa melihat bahwa jam tutup toko yang ideal merupakan dari jam 23.00 dan buka kembali di jam 6.00.
     ''')
     
 with tab3:
