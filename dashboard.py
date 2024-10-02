@@ -24,7 +24,7 @@ with tab1:
     fig, ax = plt.subplots()
     sns.barplot(x='weekday_obj', y='average_sales', data=total_sales_per_day, ax=ax, color='#72BCD4')
     ax.set_title('Bar plot: Day vs Penjualan')
-    ax.set_xlabel('Hari dalam Seminggu (0 = Minggu, 6 = Sabtu)')
+    ax.set_xlabel('Hari dalam Seminggu (0 = Senin, 6 = Minggu)')
     ax.set_ylabel('Rata-rata Penjualan')
     ax.set_ylim(4000,5000)
     
