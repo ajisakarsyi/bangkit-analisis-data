@@ -32,7 +32,7 @@ with tab1:
 
     st.header("Kesimpulan")
     st.write('''
-    - Hasil penyewaan sepeda per hari bervariasi, namun semakin mendekat ke weekend semakin menunjukkan tren penyewaan yang naik.
+    - Dalam memilih hari yang ideal agar ekspansi kuantitas dapat menghasilkan hasil yang maksimal, kita perlu mencari tahu hari apa yang memiliki rata-rata hasil penjualan tertinggi. Kita dapati bahwa hari sabtu merupakan hari yang memiliki rata-rata hasil penjualan tertinggi, dan pada umumnya hari sabtu memang digunakan untuk orang-orang dalam meluangkan waktu mereka, sehingga ekpansi kuantitas cocok untuk dilakukan di hari sabtu.
     ''')
 
 with tab2:
