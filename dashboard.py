@@ -11,7 +11,7 @@ hour_df = pd.read_csv('https://raw.githubusercontent.com/ajisakarsyi/bangkit-ana
 st.title("Dashboard Analisis 'Bike Sharing Dataset'")
 st.write("*oleh Muhammad Ajisaka Arsyi Taj*")
 
-tab1, tab2, tab3 = st.tabs(["Daily Dataframe", "Hourly Dataframe", "General"])
+tab1, tab2= st.tabs(["Daily Dataframe", "Hourly Dataframe"])
 
 with tab1:
     st.header("Daily Dataframe")
@@ -56,19 +56,3 @@ with tab2:
     - Serupa dengan pertanyaan pertama, kita bisa cari jam berapakah penyewaan sepeda mendapati angka tertingginya. Kita bisa simplifikasi atribut jam menjadi 3 cluster yang dilakukan di Analisis Lanjutan. Kita bisa lihat bahwa penyewaan sepeda tertinggi terjadi pada rush hour, yang mana sesuai dengan jadwal pekerja dan pelajar sehari-hari yang ingin pulang dari kantor/sekolahnya. Kita bisa menjawab pertanyaan kedua ini dengan melihat pada rentang jam berapakah penyewaan sepeda mencapai titik yang cenderung rendah, dan kita bisa melihat bahwa jam tutup toko yang ideal merupakan dari jam 23.00 dan buka kembali di jam 6.00.
     ''')
     
-with tab3:
-    st.header("Pengaruh Kecepatan Angin terhadap Penjualan")
-
-    # visualisasi
-    fig, ax = plt.subplots()
-    sns.scatterplot(x='windspeed', y='cnt', data=hour_df, ax=ax, color='#FF6347')
-    ax.set_title('Scatter Plot: Windspeed vs Penjualan')
-    ax.set_xlabel('Kecepatan Angin')
-    ax.set_ylabel('Jumlah Penjualan')
-    
-    st.pyplot(fig)
-
-    st.header("Kesimpulan")
-    st.write('''
-    - Meskipun rendah, kecepatan angin dengan penjualan memiliki pengaruh negatif, dimana apabila kecepatan angin terjadi dengan kuat maka hasil penyewaan sepeda cenderung rendah.
-    ''')
